@@ -7,11 +7,11 @@ const Counter = () => {
   return (
     <div className="app">
       <h2 className="counter-header">Counter With Redux</h2>
-      <h1>counter:0</h1>
+      <h1>counter:{counter}</h1>
       <div>
         <button className="counter-button positive" onClick={()=>dispatch({type:"INCRIMENT"})}>increase</button>
-        <button className="counter-button zero" onClick={()=> dispatch({type:'DECREMENT'})}>reset</button>
-        <button className="counter-button negative">decrease</button>
+        <button className="counter-button zero" onClick={()=> dispatch({type:"RESET"})}>reset</button>
+        <button className="counter-button negative" onClick={()=> dispatch({type:"DECREMENT"})}>decrease</button>
       </div>
     </div>
   );
