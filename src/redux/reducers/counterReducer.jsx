@@ -2,7 +2,10 @@ const initialState ={
     counter:0,    //global state
 }
 
-export const reducer = (state=initialState,action) =>{
+
+//pure js function
+//dışa bir bağımlılıgı olmamalı
+ const reducer = (state=initialState,action) =>{
     switch (action.type) {
         case "INCRIMENT":
             return {counter:state.counter +1}
@@ -16,3 +19,4 @@ export const reducer = (state=initialState,action) =>{
         return state    
     }
 }
+export default counretReducer;

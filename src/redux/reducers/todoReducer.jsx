@@ -1,8 +1,8 @@
 const initialState = {
-    todoList:[],
+  todoList:[],
 }
 
- const todoReducer= (state = initialState, { type, payload }) => {
+const todoReducer = (state = initialState, { type, payload }) => {
   switch (type) {
 
   case "first":
