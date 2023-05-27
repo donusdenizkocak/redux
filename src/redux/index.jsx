@@ -4,7 +4,7 @@ import todoReducer from "./reducers/todoReducer"
 
 
 const rootReducer= combineReducers({
-   counter: counterReducer ,
+   count: counterReducer ,
     todo:todoReducer,
 })
  export const store =createStore(rootReducer);

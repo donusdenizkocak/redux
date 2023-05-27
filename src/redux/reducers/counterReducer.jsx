@@ -1,3 +1,5 @@
+import { DECREMENT, INCRIMENT, RESET } from "../types/counterTypes"
+
 const initialState ={
     counter:0,    //global state
 }
@@ -5,18 +7,18 @@ const initialState ={
 
 //pure js function
 //dışa bir bağımlılıgı olmamalı
- const reducer = (state=initialState,action) =>{
+ const counterReducer = (state=initialState,action) =>{
     switch (action.type) {
-        case "INCRIMENT":
+        case INCRIMENT:
             return {counter:state.counter +1}
     
-    case "DECREMENT" :
+    case DECREMENT :
         return {counter: state.counter - 1}
 
-    case "RESET":
+    case RESET:
         return  {counter:0}
     default:
         return state    
     }
 }
-export default counretReducer;
+export default counterReducer;
