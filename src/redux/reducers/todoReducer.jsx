@@ -1,3 +1,5 @@
+import { ADD_TODO } from "../types/todoTypes";
+
 const initialState = {
   todoList:[],
 }
@@ -5,7 +7,7 @@ const initialState = {
 const todoReducer = (state = initialState, { type, payload }) => {
   switch (type) {
 
-  case "first":
+  case ADD_TODO:
     return { ...state, ...payload }
 
   default:
