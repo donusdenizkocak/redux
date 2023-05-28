@@ -1,14 +1,16 @@
 import { ADD_TODO } from "../types/todoTypes";
 
 const initialState = {
-  todoList:[],
+  todoList:[{id:1,text:"",completed:false}],
 }
 
 const todoReducer = (state = initialState, { type, payload }) => {
   switch (type) {
 
   case ADD_TODO:
-    return { ...state, ...payload }
+    return { todoList: [
+      ...state.todoList, {id:new Date().getTime(),text:payload,completed:false}
+    ] }
 
   default:
     return state
